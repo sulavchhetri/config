@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Check if a tmux session exists
+session_exists() {
+    tmux has-session -t "$1" 2>/dev/null
+}
+
+# Name of your main tmux session (change if needed)
+MAIN_SESSION="kick-dev"
+
+# Create the main session if it doesn't exist
+if ! session_exists "$MAIN_SESSION"; then
+    tmux new-session -d -s "$MAIN_SESSION" -n "projects"
+    # Left pane: Backend
+    tmux send-keys -t "$MAIN_SESSION":0.0 'cd $directory_path_1 && make start' C-m
+    # Right pane: Frontend
+    tmux split-window -h -t "$MAIN_SESSION":0
+    tmux send-keys -t "$MAIN_SESSION":0.1 'cd $directory_path_2 && make start' C-m
+else
+    echo "Session $MAIN_SESSION already exists"
+fi
+
+# pgadmin window
+if ! tmux list-windows -t "$MAIN_SESSION" | grep -q pgadmin; then
+    tmux new-window -t "$MAIN_SESSION" -n pgadmin
+    tmux send-keys -t "$MAIN_SESSION":pgadmin 'cd ~/personal/pgadmin4/ && docker compose up -d' C-m
+    tmux send-keys -t "$MAIN_SESSION":pgadmin 'clear' C-m
+else
+    echo "Window 'pgadmin' already exists in session $MAIN_SESSION"
+fi
+
+# monitor window
+if ! tmux list-windows -t "$MAIN_SESSION" | grep -q monitor; then
+    tmux new-window -t "$MAIN_SESSION" -n monitor
+    tmux send-keys -t "$MAIN_SESSION":monitor 'cd $directory_path_1' C-m
+    tmux send-keys -t "$MAIN_SESSION":monitor 'clear' C-m
+else
+    echo "Window 'monitor' already exists in session $MAIN_SESSION"
+fi
+
+# ssh window
+if ! tmux list-windows -t "$MAIN_SESSION" | grep -q ssh; then
+    tmux new-window -t "$MAIN_SESSION" -n ssh
+    tmux split-window -h -t "$MAIN_SESSION":ssh
+else
+    echo "Window 'ssh' already exists in session $MAIN_SESSION"
+fi
+
+# others window
+if ! tmux list-windows -t "$MAIN_SESSION" | grep -q others; then
+    tmux new-window -t "$MAIN_SESSION" -n others
+else
+    echo "Window 'others' already exists in session $MAIN_SESSION"
+fi
+
+# If we're inside tmux already, just switch to the session without attaching (avoid nested tmux)
+if [ -n "$TMUX" ]; then
+    tmux switch-client -t "$MAIN_SESSION"
+else
+    # Otherwise attach to the session (when called from normal terminal)
+    tmux attach-session -t "$MAIN_SESSION"
+fi
+
