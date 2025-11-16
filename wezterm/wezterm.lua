@@ -13,4 +13,5 @@ return {
   enable_tab_bar = false,
   default_prog = { "tmux" },
   window_decorations = "TITLE | RESIZE",
+  window_close_confirmation = "NeverPrompt"
 }
