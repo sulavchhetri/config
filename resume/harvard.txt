@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\setlength{\parindent}{0pt}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lipsum}
+\usepackage[left=1.06cm,top=1.7cm,right=1.06cm,bottom=0.49cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+
+\begin{document}
+\begin{center}
+    \textbf{Sulav Thapa}\\ 
+    \hrulefill
+\end{center}
+
+\begin{center}
+    Putalibazar-04 \textbullet \ Syangja, 33800 \textbullet { sulavthapachhetri@gmail.com} \textbullet \ +977 9864868643
+
+    \vspace{12pt}
+
+     \textbf{GitHub:} \href{https://github.com/sulavchhetri}{\textcolor{blue}{github.com/sulavchhetri}} \textbf{LinkedIn:} \href{https://linkedin.com/in/sulavthapa}{\textcolor{blue}{linkedin.com/in/sulavthapa}}
+    
+\end{center}
+
+\vspace{0.5pt}
+
+\begin{center}
+    \textbf{Education}
+\end{center}
+\textbf{Tribhuvan University} \hfill Purwanchal Campus, Dharan
+
+Bachelor's in Computer Engineering. \hfill Graduation Date: July 2023
+
+Relevant Coursework: Object-Oriented Programming, Software Engineering, Theory of Computation, Data Structures and Algorithms, Database Management System
+
+\vspace{12pt}
+
+\begin{center}
+    \textbf{Experience}
+\end{center}
+\textbf{Cloco Nepal Inc. Pvt. Ltd.} \hfill Kathmandu, Nepal
+
+\textbf{Software Developer} \hfill June 2024 – Ongoing
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Developed and maintained full-stack applications using Vue.js and FastAPI, ensuring seamless integration between frontend and backend systems.
+    \item Designed, implemented, and optimized RESTful APIs to improve performance, scalability, and data flow with PostgreSQL.
+    \item Led the end-to-end deployment process on AWS configuring load balancers, managing ECR/ECS, and setting up auto-scaling automated via GitHub Actions.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Crest Consulting LLC} \hfill Remote
+
+\textbf{Python Developer} \hfill December 2023 – June 2024
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Led a project to build lexers and parsers for various languages using ANTLR-4, enhancing team productivity and efficiency.
+    \item Independently managed and executed a critical initiative to parse complex XML files generated through Matillion and Informatica BDM software, retrieving crucial information for business operations.
+    \item Guided and mentored team members on the XML parsing project, demonstrating strong leadership and fostering skill development within the team.
+\end{itemize}
+
+\vspace{6pt}
+
+\textbf{Bitbari Tech Pvt. Ltd.} \hfill Remote
+
+\textbf{Data Engineer} \hfill August 2022 – September 2023
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Built robust web scraping tools using Python libraries such as Playwright and BeautifulSoup to extract data from platforms including Google Maps, Yelp, TripAdvisor, Indeed, and LinkedIn.
+    \item Engineered data parsing pipelines to transform unstructured web data into structured and analyzable formats suitable for downstream processing.
+    \item Developed proxy rotation and request handling scripts to bypass anti-scraping mechanisms and ensure scraping reliability at scale.
+\end{itemize}
+
+
+\vspace{12pt}
+
+\begin{center}
+    \textbf{Awards \& Achievements}
+\end{center}
+
+\textbf{Emerging Talent of the Year}, Cloco Nepal Inc. \hfill 2024\\
+Awarded for exceptional performance, rapid learning, and consistent contribution to development of large scale Japanese Hospital Management System. Recognized for delivering high quality code, taking initiative in complex problem solving, and showing strong potential as a future tech leader.
+
+\vspace{50pt}
+
+
+
+
+\begin{center}
+    \textbf{Projects}
+\end{center}
+\textbf{Automatic HTML Generator using Mockup Images}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Led the creation of an HTML generator model from mockup images using YOLOv5, enabling automatic HTML generation from scratch images.
+    \item Implemented the model into a web application, enabling users to upload images and receive corresponding HTML code, enhancing user experience and efficiency.
+\end{itemize}
+
+\vspace{6pt}
+
+\begin{samepage}
+\textbf{Geogather}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Developed a robust web scraping application that uses the Playwright Python library to extract map data from platforms such as Google Maps, Yelp, and Tripadvisor.
+    \item Processed and transformed extensive map data, empowering the data analysis team to derive actionable insights and facilitate data-driven decision-making processes.
+\end{itemize}
+\end{samepage}
+
+\vspace{12pt}
+
+\begin{center}
+    \textbf{Skills \& Interests}
+\end{center}
+
+\textbf{Languages:} Python, JavaScript, SQL \\
+\textbf{Frameworks/Tools:} FastAPI, Vue.js, Django, Docker, Git, GitHub Actions \\
+\textbf{Cloud/DevOps:} AWS (ECR, ECS, Load Balancer, Auto Scaling), CI/CD, Linux \\
+\textbf{Other:} RESTful APIs, Web Scraping, ANTLR-4
+
+\textbf{Languages:} English (Full Professional Proficiency), Hindi (Full Professional Proficiency)
+
+\textbf{Interests:} Problem Solving, Building Python Applications, Exploring Software Design Patterns, Web Application Development, Chess
+
+
+\end{document}
+

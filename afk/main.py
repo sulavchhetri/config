@@ -9,12 +9,12 @@ try:
     while True:
         # Get current mouse position
         x, y = pyautogui.position()
-        
+
         # Move cursor a small random distance
         dx = random.randint(-50, 50)
         dy = random.randint(-50, 50)
         pyautogui.moveTo(x + dx, y + dy, duration=0.2)
-        
+
         # Random sleep time between moves
         sleep_time = random.randint(30, 120)
         print(f"Moved mouse, next move in {sleep_time}s")
@@ -28,4 +28,3 @@ try:
 
 except KeyboardInterrupt:
     print("\nStopped.")
-
